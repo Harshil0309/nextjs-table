@@ -16,7 +16,7 @@ export default function AddBtn() {
       hobbies: hobbies,
     };
 
-    const res = await fetch("http://localhost:3000/api/users", {
+    const res = await fetch(`${process.env.DOMAIN}/api/users`, {
       method: "POST",
       body :JSON.stringify(jsonObject),
     });

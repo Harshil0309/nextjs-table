@@ -6,7 +6,7 @@ import EditUserForm from "./EditUserForm";
 
 const getUsers = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/users", {
+    const res = await fetch(`${process.env.DOMAIN}/api/users`, {
       cache: "no-store",
     });
     // console.log(res);
@@ -51,6 +51,7 @@ export default async function Userlist() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      
       <table className="min-w-full divide-y divide-gray-200">
         <thead>
           <tr>

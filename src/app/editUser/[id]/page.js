@@ -4,7 +4,7 @@ import User from "../../../../models/user";
 
 const getUserById = async (id) => {
   try {
-    const res = await fetch(`http://localhost:3000/api/users/${id}`, {
+    const res = await fetch(`${process.env.DOMAIN}/api/users/${id}`, {
       method: "GET",
       cache: "no-store",
     });

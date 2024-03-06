@@ -8,7 +8,7 @@ export default function RemoveBtn({ id }) {
     const confirmed = confirm("Are you sure?");
 
     if (confirmed) {
-      const res = await fetch(`http://localhost:3000/api/users?id=${id}`, {
+      const res = await fetch(`${process.env.DOMAIN}/api/users?id=${id}`, {
         method: "DELETE",
       });
 
